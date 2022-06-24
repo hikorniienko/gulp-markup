@@ -3,3 +3,7 @@
 @function rem($pixels) {
     @return math.div($pixels, 16) + rem;
 }
+
+@function vw($pixels, $breakpoints: $xxl) {
+    @return (math.div($pixels, $breakpoints) * 100) + vw;
+}

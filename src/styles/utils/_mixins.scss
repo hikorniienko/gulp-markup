@@ -1,11 +1,11 @@
-@mixin screen($size, $type: min-width, $orientation: false) {
+@mixin media($size, $type: min-width, $orientation: false) {
     @if type-of($size) == "number" {
         @if type-of($orientation) == "bool" {
-            @media screen and ($type: $size) {
+            @media screen and ($type: #{$size + px}) {
                 @content;
             }
         } @else {
-            @media screen and ($type: $size) and (orientation: $orientation) {
+            @media screen and ($type: #{$size + px}) and (orientation: $orientation) {
                 @content;
             }
         }

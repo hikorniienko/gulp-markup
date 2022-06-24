@@ -1,3 +1,6 @@
 h1 {
     font-size: rem(32);
+    @include media($xl) {
+        font-size: vw(50, $xl);
+    }
 }
